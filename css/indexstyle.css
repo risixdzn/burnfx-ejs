@@ -1,0 +1,716 @@
+@import url(//fonts.cdnfonts.com/css/akira-expanded);
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap");
+
+:root {
+  --primary: #db3939;
+  --primary-dark: #962626;
+  --primary-light: #db513965;
+  --primary-bright: #f14747;
+  --primary-whiter: #ffcbcb;
+  --light: #eeeeee;
+  --dark: #070707;
+  --dark2: #0c0c0c;
+  --dark3: #161616;
+  --dark4: #0c0c0cd5;
+  --dark5: #0c0c0cab;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.headerimg {
+  width: 50px;  
+}
+
+.headerimgmobile {
+  display: none;
+  width: 10PX;
+}
+
+.body {
+  position: relative;
+}
+
+html body {
+  max-width: 100%;
+  overflow-x: hidden;
+  background-color: var(--dark);  
+}
+
+
+/*snap*/
+
+.divsections{
+  width: 100%;
+  height: 100%;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+/*snapend*/
+
+.to-top{
+  background-color: var(--dark4);
+  position: fixed;
+  z-index: 99;
+  bottom: 16px;
+  right: 32px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  color: #fff;
+  pointer-events: none;
+  opacity: 0;  
+  font-size: 18px;
+  text-decoration: none;
+  transition: .3s;
+  backdrop-filter: blur(3px) grayscale(50%);
+  box-shadow: 0 0 0em var(--primary);
+}
+
+.to-top:hover{
+  transform: scale(1.1);
+  box-shadow: 0 0 1em var(--primary);
+}
+
+.to-top.is-active{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+/*home*/
+
+#videoBGhome{
+  position: fixed;    
+  z-index: -1;
+  opacity: 100%;           
+}
+
+.home {
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: row;
+  height: 96vh;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+}
+
+.home:before{
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.conteudo-home {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 25px;
+  filter: drop-shadow(0 0 5rem rgb(0, 0, 0));
+}
+
+.burnhand {
+  width: 180px;
+}
+
+.titleburn {
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 90px;
+  line-height: 80px;
+}
+
+.subtitleburn {
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 18px;
+}
+
+/*botaostart*/
+
+.btnreadmore {
+  display: grid;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.bn3637 {
+  display: inline-flex;
+  align-items: center;
+  margin: auto;
+  justify-content: center;
+  padding: 0.7rem 2rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  backface-visibility: hidden;
+  border: 0.15rem solid transparent;
+  border-radius: 3rem;
+}
+
+.bn36 {
+  border-color: #fff;
+  transition: transform 0.2s cubic-bezier(0.235, 0, 0.05, 0.95);
+}
+
+.bn36:hover {
+  transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
+}
+
+.arrowdown {
+  position: absolute;
+  display: block;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto auto;
+  transform: posi;
+  text-align: center;
+  font-size: 30px;  
+  color: white; 
+  text-decoration: none;
+  top: 50%; right: 50%;
+  transform: translate(50%, 600%); 
+  transition: transform ease-in-out .3s;   
+}
+
+.arrowdown:hover{
+  transform: translate(50%, 575%);
+}
+.arrowdown i{
+  line-height: 30px;  
+  font-size: 30px;  
+  padding: 40px;
+  margin: -40px;
+}
+
+/*botaoend*/
+
+/*quemsomos start*/
+
+.quemsomos-maxwidth {  
+  scroll-snap-align: start;
+  padding: 5vw 0;
+  background-color: var(--primary-dark);
+  background-image: url(../Imgs/topography-bg3.png);
+  height: 95vh;
+  color: #fff;
+  z-index: 97;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 2em rgba(0, 0, 0, 0.575);
+}
+
+.quemsomos-conteudo {
+  display: flex;
+  flex-direction: row;
+  align-items: space-around;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+}
+
+
+
+.numbersection{
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 30px;
+  line-height: 40px;
+}
+
+.titlesection{
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 30px;
+  line-height: 40px; 
+}
+
+.titlequemsomos hr{
+  width: 10rem;  
+  height: 5px;
+  background-color: #fff;
+  text-align: center;
+  border: none;
+}
+
+.desc{  
+  font-family: "poppins", sans-serif;
+  font-style: normal;
+  font-size: 20px;
+  max-width: 40vw;
+  margin-top: 20px;
+  font-weight: 400;  
+  text-align: justify;
+  text-justify: inter-word;     
+}
+
+.waves{
+  width: 40vw;
+  margin-left: -2.5vw;
+}
+
+.imagemside{
+  display: block;
+  width: 40vw;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/*quemsomos end*/
+
+/*trabalhos recentes start*/
+
+.trabalhos-recentes {
+  scroll-snap-align: start;
+  display: block;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+  background-color: var(--dark);
+  background-image: url(../Imgs/login-bg-dark.png);
+  height: 95vh;
+  color: #fff;
+  z-index: 97;
+  gap: 50px;
+  text-align: center;
+  background-position: center;
+  background-size: auto;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 2em rgba(0, 0, 0, 0.575);
+}
+
+.trabalhos-recentes .titlesection{
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 30px;
+  
+}
+
+.trabalhos-recentes .titlesection:after {
+  content : "";
+  position : absolute;
+  width : 20%;
+  height : 3px;
+  background-color: white;
+ margin-top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}   
+
+.swipeicon{
+  margin-top: px;
+  
+}
+
+.swipeicon .text{
+  font-family: "Poppins";
+  color: rgb(209, 209, 209);
+  font-size: 18px;
+}
+
+/*trabalho recentes end*/
+
+/*trabalhe conosco start*/
+
+.envieseusclips {
+  padding: 100px 0;  
+  background-image: url(Imgs/topo-bg.png);
+  height: 80vh;
+  color: #fff;
+  z-index: 97;
+  background-position: center;    
+  background-repeat: no-repeat;
+  box-shadow: 0 0 2em rgba(0, 0, 0, 0.575);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cttbox{
+  margin: 25px;
+  width: auto;
+  height: auto;
+  padding: 75px;
+  background: rgba( 0, 0, 0, 0.6 );
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur( 5.5px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 20px;
+  border: 1px solid rgba( 255, 255, 255, 0.05 );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cttbox .title{   
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  font-family: "Akira Expanded", sans-serif;
+  font-style: normal;
+  line-height: 40px;
+  filter: drop-shadow(0px 5px 5px #0000003a);
+}
+  
+.cttbox .title:after {
+  content: "";
+  position: absolute;
+  width: 90px;
+  height: 5px;
+  border-radius: 3px;
+  background-color: var(--primary);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+  
+.cttbox .subtitle{
+  font-weight: 500;
+  font-family: "Poppins";
+  font-style: normal;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.cttbox .desc{
+  font-weight: 400;
+  font-family: "Poppins";
+  font-style: normal;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.cttbox .button{
+  color: #ffffff;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 15px;
+  background-color: var(--primary);
+  width: 160px;
+  height: 50px;
+  border: none;
+  box-shadow: 0 0 0 var(--primary);
+  border-radius: 40px;
+  margin-top: 25px;
+  transition: 0.2s ease-in-out;
+  z-index: 950;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0px 5px 5px #0000003a);
+  text-decoration: none;
+}
+
+.cttbox .button:hover {
+  box-shadow: 0 0 1.5em var(--primary);
+  cursor: pointer;
+}
+
+.cttbox .imgwrap{
+  width: 25vw;
+  height: 12.5vw;
+}
+
+.cttbox .imgwrap img{
+  width: 100%;
+  height: 100%;
+}
+
+
+/*.envieseusclips {
+  scroll-snap-align: start;
+  display: flex;  
+  height: 90vh;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+}
+
+.envieseusclips .box{
+  background: var(--dark4);	
+  border-radius: 10px;
+  padding: 50px;  
+  flex-direction:row;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  
+  background-color: var(--dark5); 
+  backdrop-filter: blur(3px) grayscale(75%);
+  display: flex;
+}
+
+.envieseusclips .box .column1{
+  width: auto;
+  height: auto;
+}
+
+
+.envieseusclips .box .column2 img{
+  height: 500px;
+}
+
+
+.containerform {
+	max-width: auto;
+	width:100%;	
+}
+
+#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea, #contact button[type="submit"] { font:400 12px/16px "Open Sans", Helvetica, Arial, sans-serif; }
+
+#contact h3 {
+	font-family: "Akira Expanded", sans-serif;
+  color: rgb(255, 255, 255);
+	display: block;
+	font-size: 30px;
+	font-weight: 400;  
+}
+
+
+.linhaseparar{
+  height: 3.5px;
+  background-color: #FFF;
+  position: absolute;
+}
+
+#contact h4 {
+	margin:5px 0 15px;
+	display:block;
+	font-size:13px;
+  font-weight: 400;
+  font-family: "Poppins";
+}
+
+fieldset {
+	border: medium none !important;
+	margin: 0 0 10px;
+	min-width: 100%;
+	padding: 0;
+	width: 100%;
+}
+
+#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="file"], #contact textarea {
+	width:100%;
+	border:1px solid rgba(204, 204, 204, 0);
+  border-radius: 7.5px;
+	background-color: var(--dark4); 
+  backdrop-filter: blur(3px) grayscale(75%);
+	margin:0 0 5px;
+	padding:10px;
+  color: rgba(255, 255, 255, 0.89);
+}
+
+#contact input[type="text"]:hover, #contact input[type="email"]:hover, #contact input[type="tel"]:hover, #contact input[type="file"]:hover, #contact textarea:hover {
+	-webkit-transition:border-color 0.3s ease-in-out;
+	-moz-transition:border-color 0.3s ease-in-out;
+	transition:border-color 0.3s ease-in-out;
+	border:1px solid var(--primary);
+}
+
+#contact textarea {
+	height: 100px;
+	max-width:100%;
+  resize:none;
+  margin-top: 10px;
+}
+
+
+input[type=file]::file-selector-button{
+  border-radius: 5px;
+  padding: 5px 10px 5px 10px;  
+  font-size: 12px;
+
+  background-color: var(--dark3);
+  border: none;
+  color: white;
+  font-family: "Poppins";
+  font-weight: 500;
+}
+
+#contact button[type="submit"] {
+	cursor:pointer;
+	width:100%;
+	border:none;
+	background:var(--primary);
+	color:#FFF;
+	margin:0 0 5px;
+  font-family: "Poppins";
+  border-radius: 10px;
+  font-weight: 600;
+	padding:10px;
+	font-size:15px;
+  transition: 0.3s ease-in-out;
+}
+
+#contact button[type="submit"]:hover {
+	background:var(--primary-bright);
+  transition: 0.3s ease-in-out;
+	
+	
+  box-shadow: 0 0 1em var(--primary);
+}
+
+#contact button[type="submit"]:active { box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.5); }
+
+#contact input:focus, #contact textarea:focus {
+	outline:0;
+	border:1px solid var(--primary);
+  box-shadow: 0 0 0.5em var(--primary);
+}
+::-webkit-input-placeholder {
+ color:#888;
+}
+:-moz-placeholder {
+ color:#888;
+}
+::-moz-placeholder {
+ color:#888;
+}
+:-ms-input-placeholder {
+ color:#888;
+}*/
+
+/*trabalhe conosco end*/
+
+/* video responsive */
+
+@media (min-aspect-ratio: 16/9) {
+  #videoBGhome {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  #videoBGhome {
+    width: auto;
+    height: 120%;
+  }
+}
+
+/*hamburger responsive */
+
+@media (min-width: 760px) {
+  .hamburger {
+    display: none;
+  }
+  .menu {
+    display: flex;
+  }
+}
+
+/*other responsive*/
+
+@media (max-width: 760px) {
+ 
+
+  .headerimg {
+    display: none;
+  }
+
+  .headerimgmobile {
+    display: block;
+    width: 100px;
+  }
+
+  .conteudo-home {
+    gap: 3.32889vw;
+  }
+
+  .burnhand {
+    width: 23.96804vw;
+  }
+
+  .titleburn {
+    font-size: 11.98402vw;
+    line-height: 9.31315vw;
+  }
+
+  .subtitleburn {
+    font-size: 2.3968vw;
+  }
+
+  .imagemside{
+    display: none;
+  }
+
+  .quemsomos-conteudo {
+    gap: 0px;
+  }
+  
+  .column1{
+    margin-top: 2.5vh;   
+  }
+  
+  .titlequemsomos{    
+    text-align: center;
+  }
+
+  .titlequemsomos hr{
+    margin: auto;
+  }
+  
+
+  .desc{  
+    align-items: center;
+    max-width: 80vw;  
+    margin-left: 10VW; 
+    margin-right: 10vw; 
+    font-size: 17px;  
+    justify-content: center;     
+  }
+
+  #desc1{
+    text-align: center;
+  }
+
+  .waves{
+    width: 90vw;
+    margin-left: 5vw;
+    margin-top: 5rem;
+  }
+  .envieseusclips .box .column2 {
+    display: none;
+  }
+
+  .cttbox{
+    padding: 40px;
+  }
+
+  .imgwrap{
+    display: none;
+  }
+}
