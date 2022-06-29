@@ -97,6 +97,11 @@
   color: #e4e4e4;
   text-align: center;
 }
+
+.description a{
+  color: #fff;
+}
+
 .button{
   border: none;
   font-size: 16px;
