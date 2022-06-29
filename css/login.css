@@ -327,7 +327,7 @@ header.is-scrolling{
 
 .login-section {
     scroll-snap-align: start;   
-    background-color: var(--dark);
+    background-color: var(--primary-dark);
     background-image: url(../Imgs/login-bg.png);
     height: 100vh;
     color: #fff;
